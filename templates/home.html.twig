@@ -13,8 +13,6 @@
 
     <p>Votre age est de {{ age }} ?</p>
     {#
-    
-    
     {% if age >= 18  %}
         <p>Vous etes un adulte</p>
     {% elseif age >= 12  %}
@@ -22,9 +20,7 @@
     {% else %}
         <p>Vous etes un enfant</p>
     {% endif %}
-    
     #}
-    
 
     <ul>
         {% for compteur in (0..10) %}
@@ -42,5 +38,6 @@
         {% endif %}
         
     {% endfor %}
+
 </body>
 </html>

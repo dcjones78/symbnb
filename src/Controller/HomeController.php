@@ -2,9 +2,9 @@
 
 namespace App\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class HomeController extends Controller {
 
@@ -20,9 +20,11 @@ class HomeController extends Controller {
         return new Response("Bonjour " . $prenom . " vous avez " . $age . " ans");        
     }
 
+
     /**
      * @Route("/", name="homepage")
     */
+
     public function home(){
 
         $prenoms = ["sebastien" => 31, "sabine" => 12, "luka" => 54, "noemie" => 26];
@@ -34,6 +36,7 @@ class HomeController extends Controller {
                 'age'   => 12,
                 'tableau' => $prenoms    
             ]
+
         );
     }
 }
