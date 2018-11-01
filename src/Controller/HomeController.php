@@ -17,7 +17,13 @@ class HomeController extends Controller {
      */
     public function hello($prenom = "anonyme", $age = 0){
 
-        return new Response("Bonjour " . $prenom . " vous avez " . $age . " ans");        
+        //return new Response("Bonjour " . $prenom . " vous avez " . $age . " ans");        
+        return $this->render("hello.html.twig", 
+            [
+                'prenom' => $prenom,
+                'age' => $age
+            ]
+            );
     }
 
 
